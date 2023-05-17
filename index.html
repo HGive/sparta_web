@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+        * {
+            font-family: 'Gowun Dodum', sans-serif;
+        }
+        body{
+            background-color: rgb(109, 109, 109);
+        }
+        .mytitle {
+            background-color: green;
+            color: white;
+
+            height: 250px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150416_19%2Fnonepapa_142918204467643m09_PNG%2Fgyfuiyty.png&type=sc960_832');
+            background-position: center;
+            background-size: cover;
+        }
+
+        .mytitle>button {
+            width: 250px;
+            height: 50px;
+
+            background-color: transparent;
+
+            border: 1px solid white;
+            color: white;
+
+            border-radius: 50px;
+
+            margin-top: 20px;
+        }
+
+        .mytitle>button:hover {
+            border: 2px solid white;
+        }
+
+        .mycomment {
+            color: gray;
+        }
+
+        .mycards {
+            width: 1200px;
+            margin: 20px auto 20px auto;
+        }
+
+        .card > img {
+            width: auto;
+            height: 400px;
+        }
+        .mypost {
+            background-color: rgb(168, 168, 168);
+            width: 500px;
+            margin: 20px auto 20px auto;
+            padding: 20px;
+            box-shadow: 0px 0px 3px 0px gray;
+        }
+
+        .mybtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            margin-top: 20px;
+        }
+        .mybtn > button {
+            margin-right: 10px;
+        }
+
+        .card{
+            border: 2px solid rgb(73, 73, 73);
+            border-radius: 5px;
+            transition: all 0.2s ease-in-out;
+        }
+        .card:hover{
+            transform: scale(1.05);
+        }
+    </style>
+
+    <script>
+        function hey(){
+            alert("hello");
+        }
+    </script>
+</head>
+
+<body>
+    <div class="mytitle">
+        <h1>내 생애 최고의 영화들🎞</h1>
+        <button onclick="hey()">영화 기록하기</button>
+    </div>
+    <div class="mypost">
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+            <label for="floatingInput">영화 URL</label>
+        </div>
+
+        <div class="input-group mb-3">
+            <label class="input-group-text" for="inputGroupSelect01">별점</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>--선택하기--</option>
+              <option value="1">⭐</option>
+              <option value="2">⭐⭐</option>
+              <option value="3">⭐⭐⭐</option>
+              <option value="4">⭐⭐⭐⭐</option>
+              <option value="5">⭐⭐⭐⭐⭐</option>
+            </select>
+          </div>
+
+        <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+            <label for="floatingTextarea">코멘트</label>
+        </div>
+        <div class="mybtn">
+            <button type="button" class="btn btn-dark">기록하기</button>
+            <button type="button" class="btn btn-outline-dark">닫기</button>
+        </div>
+    </div>
+    <div class="mycards">
+        <div class="row row-cols-1 row-cols-md-4 g-4">
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://movie-phinf.pstatic.net/20210728_221/1627440327667GyoYj_JPEG/movie_image.jpg"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">더 수어사이드 스쿼드</h5>
+                        <p class="card-text">별난놈들의 미친 미션</p>
+                        <p>⭐⭐⭐</p>
+                        <p class="mycomment">똘끼의 한계를 돌파하는 킬링타임용 영화</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMTAxMTdfMjA4%2FMDAxNjEwODkxNDc1Mjg3.Wdr2K7Y8BU7EXv8G_-MMKibYSyYFNsaUVCzFwTI6Hngg.4c0rkra3dxQf-5kneZVKKNZaz9Te8ZERS-9moyJLqTIg.JPEG.quietbeen%2FIMG_0229.JPG&type=sc960_832"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">매트릭스</h5>
+                        <p class="card-text">워쇼스키 자매</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p class="mycomment">철학,영상,음악,세계관,연출 ... 20세기 최고의 영화</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTExMTRfMjkz%2FMDAxNTczNzI1NDgzMjM4.ec7GstsXrcawu_jvE3P6yDizrY1-6_nEXCobpDOZwQwg.y9R3DN2Ce2i6OGIykYAF1c7rjnnDUNtGdE_Y8cLLUWcg.JPEG.yunam69%2FLord_Of_The_Rings.jpg&type=sc960_832"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">반지의 제왕</h5>
+                        <p class="card-text">피터 젝슨</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p class="mycomment">판타지 영화의 왕좌</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="https://search.pstatic.net/sunny/?src=https%3A%2F%2Fi.pinimg.com%2F736x%2F97%2Ffb%2F2d%2F97fb2dda125f06fdaa317e211daa1253.jpg&type=sc960_832"
+                        class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">다크 나이트</h5>
+                        <p class="card-text">크리스토퍼 놀란</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p class="mycomment">최고의 히어로와 최고의 빌런</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
