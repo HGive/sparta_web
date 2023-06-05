@@ -12,3 +12,4 @@ for li in lis:
     title = li.select_one('.title').text.strip()
     artist = li.select_one('.artist').text
     print(rank, title, artist)
+

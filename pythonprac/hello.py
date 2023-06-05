@@ -22,4 +22,6 @@ for li in lis:
         'rate':rate
     }
     db.movies.insert_one(doc)
-    
+
+
+
