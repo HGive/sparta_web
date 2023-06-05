@@ -108,10 +108,12 @@
         $(document).ready(function () {
             fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(
                 data => {
-
-                    $('#temp').empty()
                     let temp = data['temp']
-                    $('#temp').text(temp)
+                    $('#temp').empty()
+                    let temp_html = `${temp}`
+                    $('#temp').append(temp_html)
+                    // let temp = data['temp']
+                    // $('#temp').text(temp)
                 })
 
             fetch("http://spartacodingclub.shop/web/api/movie").then(res => res.json()).then(
