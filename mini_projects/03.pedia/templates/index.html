@@ -95,34 +95,37 @@
         function listing() {
             fetch('/movie').then((res) => res.json()).then((data) => {
                 let rows = data['result']
+
                 $('#cards-box').empty()
                 rows.forEach((a) => {
-                    let comment = a['comment']
                     let title = a['title']
-                    let desc = a['desc']
                     let image = a['image']
+                    let desc = a['desc']
+                    let comment = a['comment']
                     let star = a['star']
-
                     let star_repeat = '⭐'.repeat(star)
 
-                    let temp_html = `<div class="col">
-                                        <div class="card h-100">
-                                            <img src="${image}"
-                                                class="card-img-top">
-                                            <div class="card-body">
-                                                <h5 class="card-title">${title}</h5>
-                                                <p class="card-text">${desc}</p>
-                                                <p>${star_repeat}</p>
-                                                <p class="mycomment">${comment}</p>
-                                            </div>
-                                        </div>`
-
+                    let temp_html = `
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src=${image}
+                                class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">${title}</h5>
+                                <p class="card-text">${desc}</p>
+                                <p>${star_repeat}</p>
+                                <p class="mycomment">${comment}</p>
+                            </div>
+                        </div>
+                    </div>
+                    `
                     $('#cards-box').append(temp_html)
                 })
             })
         }
 
         function posting() {
+
             let url = $('#url').val()
             let comment = $('#comment').val()
             let star = $('#star').val()
@@ -136,13 +139,11 @@
                 method: "POST",
                 body: formData
             }).then((res) => res.json()).then((data) => {
-
                 alert(data['msg'])
-                console.log(data)
                 window.location.reload()
             })
         }
-        
+
         function open_box() {
             $('#post-box').show()
         }
@@ -238,7 +239,3 @@
 </body>
 
 </html>
-
-
-
-
