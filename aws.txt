@@ -1,9 +1,6 @@
 액세스 키
 비밀 액세스 키
 
-AKIA4FLHRG6OEVMXC7ZV
-
-LkRo7qlrwfNzlYFU9TOwhcgvbiYYGvjRbCsu+FdS
 
 - 터미널 준비하기 - 
 mkdir deploy
